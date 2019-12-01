@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <head>    
+    <title>PROJETO INTEGRADOR IV: Analisando dados de sistema de previdência social ao redor do mundo</title>
+    <link rel="stylesheet" href="res/styles.css">
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     
         <script>
@@ -35,9 +38,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 </head>
 <body>    
-    
-            <div class="folium-map" id="map_4779d5abac5442e485e1e7aefeade979" ></div>
-        
+    <h>PROJETO INTEGRADOR IV: Analisando dados de sistema de previdência social ao redor do mundo</h><br>
+    <p>Por: Caio Braga Silva e Juan Victor Suman. <br>Bacharelado em Ciência da Computação - 4º Semestre</p>
+    <a href="main.html" target="_self">sobre</a>
+    <div class="folium-map" id="map_4779d5abac5442e485e1e7aefeade979" ></div>    
 </body>
 <script>    
     
@@ -47,16 +51,12 @@
                     center: [30.0, 5.0],
                     crs: L.CRS.EPSG3857,
                     maxBounds: [[-90, -180], [90, 180]],
-                    zoom: 1.8,
+                    zoom: 2.5,
                     zoomControl: true,
                     preferCanvas: false,
                 }
             );
 
-            
-
-        
-    
             var tile_layer_ebc18892c74b432bbd2393db24a72c2d = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 1.8, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
