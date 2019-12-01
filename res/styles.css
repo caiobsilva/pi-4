@@ -5,13 +5,13 @@ body{
 
 @font-face {
     font-family: VWTextRegular;
-    src: url(res/VWTextRegular.otf) format("opentype");
-}
+    src: url('VWTextRegular.otf') format('opentype');
+  }
 
 @font-face {
     font-family: VWHeadBold;
     font-weight: bold;
-    src: url("res/VWHeadBold.otf") format("opentype");
+    src: url("VWHeadBold.otf") format("opentype");
 }
 
 h{
@@ -45,4 +45,4 @@ div.resumo p{
     color: #d3d3d3;
     font-size: 120%;
     font-family: VWTextRegular;
-}
+} 
