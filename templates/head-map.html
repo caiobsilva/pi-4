@@ -1,0 +1,12 @@
+{% block head %}
+    <title>PROJETO INTEGRADOR IV: Analisando dados de sistema de previdência social ao redor do mundo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='res/styles.css')}}">
+{% endblock %}
+
+{% block content %}
+    <h>PROJETO INTEGRADOR IV: Analisando dados de sistema de previdência social ao redor do mundo</h><br>
+    <p>Por: Caio Braga Silva e Juan Victor Suman. <br> Bacharelado em Ciência da Computação - 4º Semestre</p>
+    <a href="{{ url_for('index')}}" target="_self">sobre</a>
+{% endblock %}
+
+{% extends 'map.html' %}

@@ -1,0 +1,48 @@
+body{
+    background-color: #181921;
+    margin-right: 30%;
+}
+
+@font-face {
+    font-family: VWTextRegular;
+    src: url('VWTextRegular.otf') format('opentype');
+  }
+
+@font-face {
+    font-family: VWHeadBold;
+    font-weight: bold;
+    src: url("VWHeadBold.otf") format("opentype");
+}
+
+h{
+    font-size: 180%;
+    font-family: VWHeadBold;
+    color: #f3f3f3;
+}
+p{
+    font-size: 120%;
+    font-family: VWTextRegular;
+    color: #d3d3d3;
+}
+
+a{
+    font-size: 120%;
+    font-family: VWTextRegular;
+    color: #428bca
+}
+a:hover{
+    color: #2a6496
+}
+
+div.resumo h{
+    padding-top: 10px;
+    color: #f3f3f3;
+    font-size: 180%;
+    font-family: VWHeadBold;
+}
+
+div.resumo p{
+    color: #d3d3d3;
+    font-size: 120%;
+    font-family: VWTextRegular;
+} 
