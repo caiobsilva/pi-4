@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-import pi4
+from pi4 import gerar_mapa_gasto
 
 app = Flask(__name__)
 
