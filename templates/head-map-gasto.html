@@ -1,0 +1,29 @@
+{% block head %}
+    <title>PROJETO INTEGRADOR IV: Analisando dados de sistema de previdência social ao redor do mundo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='res/styles.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div id="head-bar">
+        <h>Mapa de Gastos Previdenciários em relação ao PIB (em porcentagem).</h><br>
+        <p>Esta visualização compara gastos públicos com aposentadoria de países da OCDE e alguns externos, como Brasil e Rússia. É possível perceber o aumento dos gastos na maioria dos países, como o envelhecimento das populações.</p>
+        <form action ="/gastos" method="POST">
+            <input type="submit" name="text_input" value="1994">
+            <input type="submit" name="text_input" value="1996">
+            <input type="submit" name="text_input" value="1998">
+            <input type="submit" name="text_input" value="2000">
+            <input type="submit" name="text_input" value="2002">
+            <input type="submit" name="text_input" value="2004">
+            <input type="submit" name="text_input" value="2006">
+            <input type="submit" name="text_input" value="2008">
+            <input type="submit" name="text_input" value="2010">
+            <input type="submit" name="text_input" value="2012">
+            <input type="submit" name="text_input" value="2014">
+            <input type="submit" name="text_input" value="2016">
+        </form>
+        <a href="{{ url_for('index')}}" target="_self">sobre</a>
+        <a href="{{ url_for('mapFundos')}}" target="_self">mapa de fundos</a>   
+    </div>
+{% endblock %}
+
+{% extends 'map.html' %}

@@ -1,0 +1,28 @@
+{% block head %}
+    <title>PROJETO INTEGRADOR IV: Analisando dados de sistema de previdência social ao redor do mundo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='res/styles.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div id="head-bar">
+        <h>Mapa de Fundos Previdenciários em relação ao PIB (em porcentagem).</h><br>
+        <p>Esta visualização exibe o dinheiro administrado por fundos de pensão como porcentagem do PIB. É possível ver fundos expressivos em países como Chile e Países baixos, comparado a fundos baixos, como os do Brasil e China.</p>
+        <form action ="/fundos" method="POST">
+            <input type="submit" name="text_input" value="2008">
+            <input type="submit" name="text_input" value="2009">
+            <input type="submit" name="text_input" value="2010">
+            <input type="submit" name="text_input" value="2011">
+            <input type="submit" name="text_input" value="2012">
+            <input type="submit" name="text_input" value="2013">
+            <input type="submit" name="text_input" value="2014">
+            <input type="submit" name="text_input" value="2015">
+            <input type="submit" name="text_input" value="2016">
+            <input type="submit" name="text_input" value="2017">
+            <input type="submit" name="text_input" value="2018">
+        </form>
+        <a href="{{ url_for('index')}}" target="_self">sobre</a>  
+        <a href="{{ url_for('mapGastos')}}" target="_self">mapa de gastos</a>  
+    </div>
+{% endblock %}
+
+{% extends 'map.html' %}

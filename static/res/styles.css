@@ -36,7 +36,8 @@ a{
     font-size: 115%;
     font-family: VWHeadBold;
     color: #428bca;
-    text-decoration: none
+    text-decoration: none;
+    padding-left:20px;
 }
 a:hover{
     color: #2a6496;

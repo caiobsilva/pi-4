@@ -17,17 +17,14 @@
                 um dos principais componentes dos sistemas de seguridade social de diversos países ao redor
                 do mundo. Este projeto tem por objetivo examinar, através de bases de dados de instituições
                 como Banco Mundial, OCDE e FMI, as similaridades e divergências de tais sistemas, bem como
-                seu impacto nos países envolvidos</p>
-        <p>O projeto trabalha com variáveis numéricas e não numéricas - de requisitos como idade e
-                valores a diferenças por sexo da população - e trabalha com tabelas de diferentes anos e
-                variáveis para entradas de diversos países</p>
-
+                seu impacto nos países envolvidos. O projeto analisa dois diferentes tipos de dados - fundos de pensão como % do PIB e gasto público com aposentadorias.</p>
         <p>Através da bibliotecas de visualização e manipulação de dados da linguagem Python, como
                 Pandas, Folium e Matplotlib, e com auxilio de ferramentas abertas de mapeamento, como o
                 OpenStreetMap, pretendemos criar uma visualização interativa de um mapa global, traduzindo
                 dados demográficos e socioeconômicos em algo facilmente compreensível a todos os públicos.</p>
     </div>
 
-    <a href="{{ url_for('map')}}" target="_self">próximo</a>
+    <a href="{{ url_for('mapFundos')}}" target="_self">Fundos de Previdência em relaçao ao PIB (em porcentagem)</a><br>
+    <a href="{{ url_for('mapGastos')}}" target="_self">Gastos de Previdência em relaçao ao PIB (em porcentagem)</a>
 </body>
 </html>
