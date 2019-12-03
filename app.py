@@ -24,7 +24,7 @@ def foo(anos=[]):
         ano = int(request.form.get('text_input', None))
 
         #gera o mapa coroplético de gastos.
-        gerar_mapa_gastos(ano)
+        gerar_mapa_gasto(ano)
 
         #log de anos
         anos.append(ano)

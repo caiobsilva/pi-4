@@ -225,11 +225,23 @@ def gerar_mapa_gastos(ano):
             2015: df_gdp_spending_2015, 
             2016: df_gdp_spending_2016}
 
+    data_df_funds = {2008: df_share_gdp_2008, 
+                2009: df_share_gdp_2009,  
+                2010: df_share_gdp_2010,  
+                2011: df_share_gdp_2011,  
+                2012: df_share_gdp_2012,  
+                2013: df_share_gdp_2013, 
+                2014: df_share_gdp_2014, 
+                2015: df_share_gdp_2015,  
+                2016: df_share_gdp_2016,  
+                2017: df_share_gdp_2017, 
+                2018: df_share_gdp_2018}
+
 
 # In[12]:
 
-#Mapa coroplético
-    map2 = folium.Map(height='80%',location=[5,5], zoom_start=2.5, min_zoom=2.5, max_bounds=True)
+def gerar_mapa_gasto(ano):
+    map2 = folium.Map(location=[30,5], zoom_start=1.8, min_zoom=1.8, max_bounds=True)
 
     folium.Choropleth(
         geo_data=boundaries_map,
@@ -237,13 +249,36 @@ def gerar_mapa_gastos(ano):
         columns=['LOCATION', 'Value'],
         key_on='feature.properties.adm0_a3',
         label_color='White',
-        fill_color='BuPu',
+        fill_color='RdBu',
         fill_opacity=0.8,
         line_color='White',
-        line_opacity=0.4,
-        legend_color='White'
+        line_opacity=0.4
     ).add_to(map2)
 
     map2.save(outfile='templates/map.html')
 
+
     print("Total de países com dados: " + str(len(data_df[ano])-2)) #-2 pq 2 valores são de max e min
+    map2
+
+def gerar_mapa_fundos(ano):
+    #Mapa coroplético
+    map2 = folium.Map(location=[30,5], zoom_start=1.8, min_zoom=1.8, max_bounds=True)
+
+    folium.Choropleth(
+        geo_data=boundaries_map,
+        data=data_df_funds[ano], #seleciona os dados por meio do dicionário de dataframes
+        columns=['COU', 'Value'],
+        key_on='feature.properties.adm0_a3',
+        label_color='White',
+        fill_color='RdBu',
+        fill_opacity=0.8,
+        line_color='White',
+        line_opacity=0.4
+    ).add_to(map2)
+
+    map2.save(outfile='templates/map.html')
+
+
+    print("Total de países com dados: " + str(len(data_df[ano])-2)) #-2 pq 2 valores são de max e min
+    map2
