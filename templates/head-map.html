@@ -4,9 +4,26 @@
 {% endblock %}
 
 {% block content %}
-    <h>PROJETO INTEGRADOR IV: Analisando dados de sistema de previdência social ao redor do mundo</h><br>
-    <p>Por: Caio Braga Silva e Juan Victor Suman. <br> Bacharelado em Ciência da Computação - 4º Semestre</p>
-    <a href="{{ url_for('index')}}" target="_self">sobre</a>
+    <div id="head-bar">
+        <h>PROJETO INTEGRADOR IV: Analisando dados de sistema de previdência social ao redor do mundo</h><br>
+        <p>Por: Caio Braga Silva e Juan Victor Suman. <br> Bacharelado em Ciência da Computação - 4º Semestre</p>
+        <form action ="/foo" method="POST">
+            <input type="submit" name="text_input" value="2000">
+            <input type="submit" name="text_input" value="2002">
+            <input type="submit" name="text_input" value="2004">
+            <input type="submit" name="text_input" value="2006">
+            <input type="submit" name="text_input" value="2008">
+            <input type="submit" name="text_input" value="2010">
+            <input type="submit" name="text_input" value="2012">
+            <input type="submit" name="text_input" value="2014">
+            <input type="submit" name="text_input" value="2016">
+        </form>
+        <a href="{{ url_for('index')}}" target="_self">sobre</a>   
+    </div>
 {% endblock %}
+
+<!--
+    Como esse vai ser dos Fundos de Previdência, fazer um head-map para Gastos com Previdência com Porcentagem do PIB.
+-->
 
 {% extends 'map.html' %}

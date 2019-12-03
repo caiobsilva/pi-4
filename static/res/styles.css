@@ -14,24 +14,33 @@ body{
     src: url("VWHeadBold.otf") format("opentype");
 }
 
+#head-bar{
+    background-color: #181921;
+    max-width: 100%;
+    height: 20%;
+}
+
 h{
-    font-size: 180%;
+    font-size: 160%;
     font-family: VWHeadBold;
     color: #f3f3f3;
 }
 p{
-    font-size: 120%;
+    font-size: 110%;
     font-family: VWTextRegular;
     color: #d3d3d3;
+    text-align: justify;
 }
 
 a{
-    font-size: 120%;
-    font-family: VWTextRegular;
-    color: #428bca
+    font-size: 115%;
+    font-family: VWHeadBold;
+    color: #428bca;
+    text-decoration: none
 }
 a:hover{
-    color: #2a6496
+    color: #2a6496;
+    text-decoration: underline
 }
 
 div.resumo h{
@@ -46,3 +55,17 @@ div.resumo p{
     font-size: 120%;
     font-family: VWTextRegular;
 } 
+
+input[type=submit]{
+    /*background: #272727;*/
+    background: #181921;
+    color: #f3f3f3;   
+    border: none;
+    text-align: center;
+    font-size: 100%;
+    font-family: VWHeadBold;
+}
+input[type=submit]:hover{
+    color: #d3d3d3;
+    text-decoration: underline
+}
