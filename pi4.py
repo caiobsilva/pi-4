@@ -222,7 +222,7 @@ def gerar_mapa_gasto(ano):
         columns=['LOCATION', 'Value'],
         key_on='feature.properties.adm0_a3',
         label_color='White',
-        fill_color='RdBu',
+        fill_color='YlOrRd',
         fill_opacity=0.8,
         line_color='White',
         line_opacity=0.4
